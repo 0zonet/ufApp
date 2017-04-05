@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-label>Ingresa fecha</ion-label>
+      <ion-datetime displayFormat="DD MM YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="date" (ionChange)="onChangeDate()"></ion-datetime>
+    </ion-item>
+
+    <ion-card *ngIf="value">
+
+        <ion-card-header>
+          Valor uf
+        </ion-card-header>
+
+        <ion-card-content>
+          ${{value}} 
+        </ion-card-content>
+
+    </ion-card>
+
+
+</ion-content>
